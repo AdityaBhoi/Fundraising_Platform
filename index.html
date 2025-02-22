@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fundraising Platform</title>
+</head>
+<body>
+    <h1>Fundraising Platform</h1>
+    <p>Total Donations: ${{ total }}</p>
+    <a href="/donate">Make a Donation</a>
+    <h2>Recent Donations</h2>
+    <ul>
+        {% for donation in donations %}
+            <li>{{ donation.name }} donated ${{ donation.amount }} - "{{ donation.message }}"</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
